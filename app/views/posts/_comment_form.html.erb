@@ -1,0 +1,12 @@
+<%= form_with(model: [post, comment], remote: true) do |form| %>
+
+  <div class="field">
+    <%= form.label :body, 'Comment' %>
+    <%= form.text_area :body, id: :comment_body %>
+  </div>
+
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

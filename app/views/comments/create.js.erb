@@ -1,0 +1,6 @@
+<% if @comment.errors.any? %>
+alert("<%=@comment.errors.full_messages.join('\n').html_safe %>");
+<% else %>
+$("#post-comments").append("<%= escape_javascript(render 'comment', comment: @comment) %>");
+$("#comment_body").val("");
+<% end %>
